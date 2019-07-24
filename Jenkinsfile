@@ -10,6 +10,7 @@ pipeline {
       steps {
         echo 'test integration'
         sh'''
+        rm -rf testfile.json
         python test.py
         cat testfile.json
         '''
