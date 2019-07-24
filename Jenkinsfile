@@ -11,7 +11,7 @@ pipeline {
         echo 'test integration'
         sh'''
         python test.py
-        cat testfile.txt
+        cat testfile.json
         '''
       }
 
