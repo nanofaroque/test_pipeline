@@ -33,6 +33,9 @@ pipeline {
 		}
 		stage ('deploy:prod') {
     steps {
+      sh'''
+      rm -rf testfile.json
+      '''
       echo 'test deploy'
     }
 		}
