@@ -9,6 +9,9 @@ pipeline {
 		stage ('test: integration-&-quality') {
       steps {
         echo 'test integration'
+        sh'''
+        python test.py
+        '''
       }
 
 		}
