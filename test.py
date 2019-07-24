@@ -1,6 +1,3 @@
-import json
-
-
 def file_write_omar(data):
     file = open('testfile.json', 'a')
     file.write(''.join(str(data)))
