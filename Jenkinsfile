@@ -2,22 +2,35 @@ pipeline {
 	agent any
 	stages {
 		stage ('build') {
-			echo 'build'
+    steps {
+      echo 'test integration'
+    }
 		}
 		stage ('test: integration-&-quality') {
-			echo 'test integration'
+      steps {
+        echo 'test integration'
+      }
+
 		}
 		stage ('test: functional') {
-			echo 'test functional'
+    steps {
+      echo 'test functional'
+    }
 		}
 		stage ('test: load-&-security') {
-			echo 'test load'
+    steps {
+      echo 'test load'
+    }
 		}
 		stage ('approval') {
-			echo 'approval'
+    steps {
+      echo 'test approval'
+    }
 		}
 		stage ('deploy:prod') {
-			echo 'deployment'
+    steps {
+      echo 'test deploy'
+    }
 		}
 	}
 }
