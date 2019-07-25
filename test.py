@@ -1,18 +1,20 @@
 import json
+import xml.etree.ElementTree as ET
+
+
 def file_write(data):
     file = open('testfile.json', 'a')
     file.write(''.join(str(data)))
 
 
-
-def test():
+def adding_extra_field_and_tag():
     with open('sample.xml', 'r') as f, open('new_sample.xml', 'w') as g:
         g.write('<?xml version="1.0"?>')
         g.write('<dependencies>{}</dependencies>'.format(f.read()))
 
 
-test()
-import xml.etree.ElementTree as ET
+adding_extra_field_and_tag()
+
 tree = ET.parse('new_sample.xml')
 root = tree.getroot()
 dependencies = []
@@ -28,4 +30,3 @@ for child in root:
     dependencies.append(json.dumps(d))
 dd = json.dumps(dependencies)
 file_write(dd)
-
