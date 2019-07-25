@@ -1,0 +1,9 @@
+<dependency>
+  <groupId>hg</groupId>
+  <artifactId>ha.ha</artifactId>
+  <version>1.09</version>
+</dependency>
+<dependency>
+  <groupId>hg</groupId>
+  <artifactId>ha.ha</artifactId>
+</dependency>
